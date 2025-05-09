@@ -244,6 +244,16 @@ footer>a:hover {
 	color: #FFF;
 }
 
+@media (max-width: 460px) {
+	footer>br {
+		display: block !important;
+	}
+
+	footer>.dot {
+		display: none;
+	}
+}
+
 @media (prefers-color-scheme: light) {
 	body {
 		background: linear-gradient(to bottom, #C6BCCE, #55217D);
