@@ -80,7 +80,7 @@ async function getHiddenVODs(channel, channelID, thumbnailURL) {
 
 		let suggestion
 		if (!/:\/\/[\w-]+\.twitch\.tv/.test(thumbnailURL ?? "")) {
-			suggestion = thumbnailURL.match(/cf_vods\/(\w+)/)[1]
+			suggestion = thumbnailURL?.match(/cf_vods\/(\w+)/)[1]
 		}
 
 		let id = stream.streamId
