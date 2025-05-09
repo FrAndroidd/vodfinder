@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>VOD Finder</title>
+	<link rel="stylesheet" href="landing.css">
+	<link rel="icon" href="favicon.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta charset="UTF-8">
+	<meta name="darkreader-lock">
+
+	<meta property="og:title" content="VOD Finder">
+	<meta property="og:description" content="Find Twitch VODs and their .m3u8 link, for both public and hidden VODs">
+	<meta name="description" content="Find Twitch VODs and their .m3u8 link, for both public and hidden VODs">
+	<meta property="og:url" content="https://vod.starsita.xyz">
+	<meta property="theme-color" content="#1D1127">
+
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+		rel="stylesheet">
+</head>
+
+<body>
+	<div class="background">
+		<div id="banner"></div>
+		<div class="blur"></div>
+	</div>
+
+	<header>
+		<div id="logoContainer">
+			<svg class="logo" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" id="Layer_1" x="0" y="0"
+				style="enable-background:new 0 0 2400 2800" version="1.1" viewBox="0 0 2400 2800">
+				<style>
+					.st1 {
+						fill: #9146ff
+					}
+				</style>
+				<path d="m2200 1300-400 400h-400l-350 350v-350H600V200h1600z" style="fill:#fff" />
+				<g id="Layer_1-2">
+					<path
+						d="M500 0 0 500v1800h600v500l500-500h400l900-900V0H500zm1700 1300-400 400h-400l-350 350v-350H600V200h1600v1100z"
+						class="st1" />
+					<path d="M1700 550h200v600h-200zM1150 550h200v600h-200z" class="st1" />
+				</g>
+			</svg>
+			<h1 class="text-shadow">VOD Finder</h1>
+		</div>
+		<input type="text" id="input" autocomplete="off" class="box-shadow">
+		<label id="checkboxContainer" class="text-shadow">
+			<div class="check box-shadow"></div>
+			<input type="checkbox" id="checkbox">
+			Merge public/hidden VODs
+		</label>
+		<div id="loading">
+			<span class="throbber"></span>
+			<div id="states"></div>
+		</div>
+	</header>
+
+	<main>
+		<div>
+			<h2 class="text-shadow">Public VODs</h2>
+			<section class="box-shadow" id="publicContainer"></section>
+		</div>
+		<div>
+			<h2 class="text-shadow">Hidden VODs</h2>
+			<section class="box-shadow" id="hiddenContainer"></section>
+		</div>
+		<div>
+			<h2 class="text-shadow">VODs</h2>
+			<section class="box-shadow" id="allContainer"></section>
+		</div>
+	</main>
+
+	<footer>
+		<span class="text-shadow">Made with &lt;3 by</span>
+		<a class="text-shadow" href="https://github.com/FrAndroidd">FrAndroid</a>
+		<span class="text-shadow"> · Not affiliated with Twitch</span>
+	</footer>
+
+	<script src="public.js"></script>
+	<script src="hidden.js"></script>
+	<script src="parse.js"></script>
+	<script src="main.js"></script>
+</body>
+
+</html>
